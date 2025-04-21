@@ -1,0 +1,36 @@
+mv-accordion {
+    @apply space-y-4 block;
+
+    mv-accordion-item {
+        @apply flex flex-col;
+
+        &:has(input[type="radio"]:checked, input[type="checkbox"]:checked) {
+            mv-accordion-item-content {
+                @apply grid-rows-[1fr];
+            }
+
+            mv-accordion-item-icon {
+                @apply -scale-y-100;
+            }
+        }
+    }
+
+    mv-accordion-item-title {
+        label {
+            @apply cursor-pointer;
+        }
+
+        mv-accordion-item-icon {
+            @apply transition-transform;
+        }
+    }
+
+    mv-accordion-item-content {
+        @apply grid grid-rows-[0fr] overflow-hidden;
+        transition: grid-template-rows 0.2s ease-out;
+
+        mv-accordion-item-content-inner {
+            @apply overflow-hidden mt-3 pt-3 border-t;
+        }
+    }
+}
