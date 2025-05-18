@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @import "./accordion.css";
+@import "./tabs.css";
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}

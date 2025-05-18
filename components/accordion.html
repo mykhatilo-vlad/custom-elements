@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements</title>
+
+    <link rel="stylesheet" href="../assets/css/output.css">
+</head>
+
+<body>
+
+    <div class="container mx-auto py-8">
+
+        <nav class="mb-10"><a href="/" class="text-xl font-bold flex items-center gap-3 text-blue-600 hover:text-blue-800"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20"><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg> Back</a></nav>
+
+        <h2 class="text-2xl mb-8 font-bold">Common accordion</h2>
+
+        <mvv-accordion class="space-y-5">
+            <div class="shadow-lg p-5 rounded border border-gray-200">
+                <details name="common-accordion" open>
+                    <summary class="font-bold text-lg flex gap-3 items-center justify-between">What is Lorem Ipsum?
+                        <mvv-accordion-arrow><svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg></mvv-accordion-arrow>
+                    </summary>
+                </details>
+                <mvv-accordion-content>
+                    <mvv-accordion-content-inner>
+                        <div class="pt-5 border-t mt-5">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+                        </div>
+                    </mvv-accordion-content-inner>
+                </mvv-accordion-content>
+            </div>
+            <div class="shadow-lg p-5 rounded border border-gray-200">
+                <details name="common-accordion">
+                    <summary class="font-bold text-lg flex gap-3 items-center justify-between">Where does it come from?
+                        <mvv-accordion-arrow><svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg></mvv-accordion-arrow>
+                    </summary>
+                </details>
+                <mvv-accordion-content>
+                    <mvv-accordion-content-inner>
+                        <div class="pt-5 border-t mt-5">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                            a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                            Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
+                            word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+                            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                            Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
+                            popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+                            amet..", comes from a line in section 1.10.32.
+                        </div>
+                    </mvv-accordion-content-inner>
+                </mvv-accordion-content>
+            </div>
+            <div class="shadow-lg p-5 rounded border border-gray-200">
+                <details name="common-accordion">
+                    <summary class="font-bold text-lg flex gap-3 items-center justify-between">Why do we use it?
+                        <mvv-accordion-arrow><svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg></mvv-accordion-arrow>
+                    </summary>
+                </details>
+                <mvv-accordion-content>
+                    <mvv-accordion-content-inner>
+                        <div class="pt-5 border-t mt-5">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                            here', making it look like readable English. Many desktop publishing packages and web page
+                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+                            uncover many web sites still in their infancy. Various versions have evolved over the years,
+                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </div>
+                    </mvv-accordion-content-inner>
+                </mvv-accordion-content>
+            </div>
+            <div class="shadow-lg p-5 rounded border border-gray-200">
+                <details name="common-accordion">
+                    <summary class="font-bold text-lg flex gap-3 items-center justify-between">Where can I get some?
+                        <mvv-accordion-arrow><svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg></mvv-accordion-arrow>
+                    </summary>
+                </details>
+                <mvv-accordion-content>
+                    <mvv-accordion-content-inner>
+                        <div class="pt-5 border-t mt-5">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour, or randomised words which don't look
+                            even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
+                            sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+                            generators on the Internet tend to repeat predefined chunks as necessary, making this the
+                            first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
+                            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+                            The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+                            non-characteristic words etc.
+                        </div>
+                    </mvv-accordion-content-inner>
+                </mvv-accordion-content>
+            </div>
+        </mvv-accordion>
+
+    </div>
+</body>
+
+</html>

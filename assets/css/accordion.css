@@ -10,15 +10,6 @@ mvv-accordion {
         }
     }
 
-    summary {
-        list-style: none;
-        cursor: pointer;
-    }
-
-    summary::-webkit-details-marker {
-        display: none;
-    }
-
     mvv-accordion-arrow {
         transition: rotate calc(var(--_duration, 0.3s) * 5) ease;
     }

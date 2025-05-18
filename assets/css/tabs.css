@@ -1,0 +1,16 @@
+mvv-tabs {
+    mvv-tabs-content {
+        @apply hidden;
+    }
+
+    details[open] {
+
+        & + mvv-tabs-content {
+            @apply block;
+        }
+    }
+}
+
+.vertical-tabs {
+    grid-template-rows: repeat(var(--_rows), 1fr);
+}
