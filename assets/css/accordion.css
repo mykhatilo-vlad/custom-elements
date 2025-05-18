@@ -1,36 +1,35 @@
-mv-accordion {
-    @apply space-y-4 block;
+mvv-accordion {
+    --_duration: 0.3s;
 
-    mv-accordion-item {
-        @apply flex flex-col;
-
-        &:has(input[type="radio"]:checked, input[type="checkbox"]:checked) {
-            mv-accordion-item-content {
-                @apply grid-rows-[1fr];
-            }
-
-            mv-accordion-item-icon {
-                @apply -scale-y-100;
-            }
+    details[open] {
+        mvv-accordion-arrow {
+            rotate: calc(360deg * 5 + 180deg);
+        }
+        & + mvv-accordion-content {
+            grid-template-rows: 1fr;
         }
     }
 
-    mv-accordion-item-title {
-        label {
-            @apply cursor-pointer;
-        }
-
-        mv-accordion-item-icon {
-            @apply transition-transform;
-        }
+    summary {
+        list-style: none;
+        cursor: pointer;
     }
 
-    mv-accordion-item-content {
-        @apply grid grid-rows-[0fr] overflow-hidden;
-        transition: grid-template-rows 0.2s ease-out;
+    summary::-webkit-details-marker {
+        display: none;
+    }
 
-        mv-accordion-item-content-inner {
-            @apply overflow-hidden mt-3 pt-3 border-t;
-        }
+    mvv-accordion-arrow {
+        transition: rotate calc(var(--_duration, 0.3s) * 5) ease;
+    }
+
+    mvv-accordion-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows var(--_duration, 0.3s) ease;
+    }
+
+    mvv-accordion-content-inner {
+        overflow: hidden;
     }
 }
