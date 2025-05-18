@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./accordion.css";
 @import "./tabs.css";
+@import "./dropdown.css";
 
 summary {
     list-style: none;
@@ -9,4 +10,8 @@ summary {
 
 summary::-webkit-details-marker {
     display: none;
+}
+
+button {
+    cursor: pointer;
 }

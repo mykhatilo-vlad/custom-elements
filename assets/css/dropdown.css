@@ -1,0 +1,12 @@
+mvv-dropdown {
+
+    mvv-dropdown-icon {
+        transition: rotate 1s ease;
+    }
+
+    details[open] {
+        mvv-dropdown-icon {
+            rotate: calc(360deg * 2 + 180deg);
+        }
+    }
+}
