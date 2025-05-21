@@ -1,0 +1,12 @@
+mvv-carousel {
+    @apply max-w-full px-5;
+
+    [is="mvv-carousel-scrollview"] {
+        @apply flex gap-4 overflow-x-scroll snap-x snap-mandatory max-w-full scroll-smooth overscroll-x-contain;
+        scrollbar-width: none;
+
+        > div {
+            @apply snap-center;
+        }
+    }   
+}

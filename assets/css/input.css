@@ -2,6 +2,7 @@
 @import "./accordion.css";
 @import "./tabs.css";
 @import "./dropdown.css";
+@import "./carousel.css";
 
 summary {
     list-style: none;

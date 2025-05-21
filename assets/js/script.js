@@ -43,3 +43,16 @@ class MVVDropdown extends HTMLElement {
 }
 
 customElements.define('mvv-dropdown', MVVDropdown);
+
+class MVVCarousel extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+
+    }
+}
+
+customElements.define('mvv-carousel', MVVCarousel);
