@@ -1,12 +1,26 @@
 mvv-carousel {
     @apply max-w-full px-5;
+    --_gap: 20px;
+    --_slides: 1;
+
+    @media (width >=641px) {
+        --_slides: 2;
+    }
+
+    @media (width >=1025px) {
+        --_slides: 3;
+    }
 
     [is="mvv-carousel-scrollview"] {
-        @apply flex gap-4 overflow-x-scroll snap-x snap-mandatory max-w-full scroll-smooth overscroll-x-contain;
         scrollbar-width: none;
+        gap: var(--_gap, 0);
+        @apply flex overflow-x-scroll snap-x snap-mandatory max-w-full scroll-smooth overscroll-x-contain;
 
-        > div {
-            @apply snap-center;
+
+        >* {
+            @apply snap-start shrink-0 grow;
+            width: calc((100% / var(--_slides)) - (var(--_gap, 0) / var(--_slides) * (var(--_slides) - 1)));
+            /* width: calc(100% / var(--_slides)); */
         }
-    }   
+    }
 }
